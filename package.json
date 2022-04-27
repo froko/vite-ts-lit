@@ -1,0 +1,31 @@
+{
+  "name": "vite-ts-lit",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write \"./**/*{.ts,.html,.css}\"",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^2.2.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.5"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache",
+    "*.{ts,css,md,html,json}": "prettier --write"
+  }
+}
